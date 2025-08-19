@@ -3,7 +3,8 @@ ESM Models:
 0. Clone the repository from https://github.com/ntranoslab/esm-variants
 1. `python extract_protein.py` to get protein_dataset/Preprocessed_all_prot.fasta
 2. 
-    ```python ../esm-variants/esm_score_missense_mutations.py --input-fasta-file protein_dataset/Preprocessed_all_prot.fasta --output-csv-file protein_dataset/ESM1b_score.csv --model-name esm1b_t33_650M_UR50S
+    ```
+    python ../esm-variants/esm_score_missense_mutations.py --input-fasta-file protein_dataset/Preprocessed_all_prot.fasta --output-csv-file protein_dataset/ESM1b_score.csv --model-name esm1b_t33_650M_UR50S
     python ../esm-variants/esm_score_missense_mutations.py --input-fasta-file protein_dataset/Preprocessed_all_prot.fasta --output-csv-file protein_dataset/ESM1v_score.csv --model-name esm1v_t33_650M_UR90S_1
     python ../esm-variants/esm_score_missense_mutations.py --input-fasta-file protein_dataset/Preprocessed_all_prot.fasta --output-csv-file protein_dataset/ESM2_score.csv --model-name esm2_t33_650M_UR50D
     ```
@@ -17,7 +18,8 @@ ESM Models:
 AlphaMissense:
 1. get precomputed AlphaMissense scores AlphaMissense_hg38.tsv from https://alphamissense.hegelab.org/
 2. 
-    ```python alphamissense_merge.py
+    ```
+    python alphamissense_merge.py
     python alphamissense_merge_stop_gain.py
     ```
     to match scores according to the benchmark, and also compute scores for stop_gain
@@ -27,7 +29,8 @@ AlphaMissense:
 PrimateAI3D:
 1. get precomputed PrimateAI3D scores PrimateAI-3D.hg38.txt from https://primateai3d.basespace.illumina.com/
 2. 
-    ```python primateai3d_merge.py
+    ```
+    python primateai3d_merge.py
     python primateai3d_merge_stop_gain.py
     ```
     to match scores according to the benchmark, and also compute scores for stop_gain
