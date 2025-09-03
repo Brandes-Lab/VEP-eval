@@ -1,7 +1,7 @@
 # Genomic heterogeneity inflates the performance of variant pathogenicity predictions
 
 [![bioRxiv](https://img.shields.io/badge/bioRxiv-Available-red)](https://www.biorxiv.org/content/XXXX.XX.XXXXXXv1)
-This repository accompanies our paper, now available on [bioRxiv](https://www.biorxiv.org/content/XXXX.XX.XXXXXXv1).  
+This repository accompanies our paper [Genomic heterogeneity inflates the performance of variant pathogenicity predictions](https://www.biorxiv.org/content/XXXX.XX.XXXXXXv1).  
 
 It provides a **genome-wide, variant-type-stratified benchmark dataset** (>250,000 ClinVar variants) and the code to evaluate state-of-the-art **DNA- and protein-based models** for variant pathogenicity prediction.
 
