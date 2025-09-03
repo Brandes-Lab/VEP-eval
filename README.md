@@ -22,17 +22,23 @@ The dataset is available in the [`data/`](data/) directory.
   - Coding: missense, synonymous, start-loss, stop-gain, stop-loss  
   - Noncoding: canonical splice, non-splice intron, 5′ UTR, 3′ UTR, RNA gene
 
-## Notebook
+## Notebooks
 
-We provide one-click Jupyter notebook examples for each evaluated model.  
+We provide one-click Jupyter notebook examples for each evaluated model, benchmark creation, and results visualization.  
 
 - **DNA-based models**:  
   AlphaGenome, DNABERT2, Evo2, GPN-MSA, Nucleotide Transformer (NT), PhyloGPN, PhyloP  
-  Notebooks are available in the [`DNA-based Models/`](DNA-based%20Models/) directory.  
+  → Notebooks are available in the [`DNA-based Models/`](DNA-based%20Models/) directory.  
 
 - **Protein-based models**:  
   ESM family models, AlphaMissense, PrimateAI-3D  
-  Notebooks are available in the [`protein_models/`](protein_models/) directory.
+  → Notebooks are available in the [`protein_models/`](protein_models/) directory.  
+
+- **Benchmark creation**:  
+  → See [`VEP_ClinVar_Benchmarking_RefSeq.ipynb`](VEP_ClinVar_Benchmarking_RefSeq.ipynb).  
+
+- **Visualization**:  
+  → See [`VEP_AUROC_figure.ipynb`](VEP_AUROC_figure.ipynb).  
 
 ## Citation
 
