@@ -18,13 +18,19 @@ The dataset is available in the [`data/`](data/) directory.
 
 - **Source**: ClinVar (GRCh38, single-nucleotide variants with expert-reviewed labels)  
 - **Scale**: >250,000 variants  
-- **Labels**: Pathogenic vs. Benign  
+- **Labels**: Pathogenic (1) vs. Benign (0) 
 - **Variant categories**:  
   - Coding: missense, synonymous, start-loss, stop-gain, stop-loss  
   - Noncoding: canonical splice, non-splice intron, 5′ UTR, 3′ UTR, RNA gene
 
+## Notebooks
 
-This repository contains all the codes to replicate the benchmark generation, the scores of protein sequence and DNA sequence mutations. <br>
-We categorize the model into 2 directories: <br>
-DNA models: AlphaGenome, DNABERT2, Evo2, GPNMSA, NT, PhyloGPN, PhyloP. <br>
-Protein models: ESM Models, AlphaMissense, PrimateAI3D. <br>
+We provide one-click Jupyter notebook examples for each evaluated model.  
+
+- **DNA-based models**:  
+  AlphaGenome, DNABERT2, Evo2, GPN-MSA, Nucleotide Transformer (NT), PhyloGPN, PhyloP  
+  → notebooks are available in the [`DNA-based Models/`](DNA-based%20Models/) directory.  
+
+- **Protein-based models**:  
+  ESM family models, AlphaMissense, PrimateAI-3D  
+  → notebooks are available in the [`protein_models/`](protein_models/) directory.  
