@@ -8,7 +8,8 @@ It provides a **genome-wide, variant-type-stratified benchmark dataset** (>250,0
 ## Contents
 
 - [Dataset](#dataset)
-- [Notebook](#notebook)
+- [Notebooks](#notebooks)
+- [Results](#results)
 - [Citation](#citation)
 
 ## Dataset
@@ -38,7 +39,22 @@ We provide one-click Jupyter notebook examples for each evaluated model, benchma
   → See [`VEP_ClinVar_Benchmarking_RefSeq.ipynb`](VEP_ClinVar_Benchmarking_RefSeq.ipynb).  
 
 - **Visualization**:  
-  → See [`VEP_AUROC_figure.ipynb`](VEP_AUROC_figure.ipynb).  
+  → See [`VEP_AUROC_figure.ipynb`](VEP_AUROC_figure.ipynb).
+
+
+## Results
+
+<p align="center">
+  <img src="docs/figure1.png" alt="AUROC Results by Variant Type" width="900">
+</p>
+
+**Figure 1. Pathogenicity prediction performance of frontier sequence-based models across variant types.**  
+Evaluation and comparison of DNA and protein sequence AI models for their capacity to distinguish between pathogenic and benign variants across variant types, measured by the area under the receiver operating characteristic curve (AUROC).  
+- **%P** indicates the proportion of pathogenic variants in each group.  
+- Some groups are defined by multiple annotated effects (e.g., both missense and 3′ UTR, with respect to different transcripts).  
+- **DNA models** are shown as solid bars, **protein models** as dashed bars.  
+
+*Note: The evaluation of PrimateAI-3D on stop-gain variants includes only 19,795 variants.*
 
 ## Citation
 
