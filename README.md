@@ -9,7 +9,6 @@ It provides a **genome-wide, variant-type-stratified benchmark dataset** (>250,0
 
 - [Dataset](#dataset)
 - [Notebook](#notebook)
-- [Results](#results)
 - [Citation](#citation)
 
 ## Dataset
@@ -23,14 +22,30 @@ The dataset is available in the [`data/`](data/) directory.
   - Coding: missense, synonymous, start-loss, stop-gain, stop-loss  
   - Noncoding: canonical splice, non-splice intron, 5′ UTR, 3′ UTR, RNA gene
 
-## Notebooks
+## Notebook
 
 We provide one-click Jupyter notebook examples for each evaluated model.  
 
 - **DNA-based models**:  
   AlphaGenome, DNABERT2, Evo2, GPN-MSA, Nucleotide Transformer (NT), PhyloGPN, PhyloP  
-  → notebooks are available in the [`DNA-based Models/`](DNA-based%20Models/) directory.  
+  Notebooks are available in the [`DNA-based Models/`](DNA-based%20Models/) directory.  
 
 - **Protein-based models**:  
   ESM family models, AlphaMissense, PrimateAI-3D  
-  → notebooks are available in the [`protein_models/`](protein_models/) directory.  
+  Notebooks are available in the [`protein_models/`](protein_models/) directory.
+
+## Citation
+
+If you find this benchmark useful for your research, please cite our paper:
+
+```bibtex
+@article{YourName2025,
+  author    = {Your Name and Collaborators},
+  title     = {Genomic heterogeneity inflates the performance of variant pathogenicity predictions},
+  journal   = {bioRxiv},
+  year      = {2025},
+  doi       = {10.1101/2025.XX.XXXXX},
+  url       = {https://www.biorxiv.org/content/10.1101/2025.XX.XXXXXv1},
+  eprint    = {https://www.biorxiv.org/content/10.1101/2025.XX.XXXXXv1.full.pdf}
+}
+
