@@ -45,7 +45,7 @@ We provide one-click Jupyter notebook examples for each evaluated model, benchma
 ## Results
 
 <p align="center">
-  <img src="docs/figure1.png" alt="AUROC Results by Variant Type" width="900">
+  <img src="/figure1.png" alt="AUROC Results by Variant Type" width="900">
 </p>
 
 **Figure 1. Pathogenicity prediction performance of frontier sequence-based models across variant types.**  
