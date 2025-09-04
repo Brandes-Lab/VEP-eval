@@ -7,21 +7,9 @@ It provides a **genome-wide, variant-type-stratified benchmark dataset** (>250,0
 
 ## Contents
 
-- [Dataset](#dataset)
 - [Notebooks](#notebooks)
 - [Results](#results)
 - [Citation](#citation)
-
-## Dataset
-  
-The dataset is available in the [`data/`](data/) directory.
-
-- **Source**: ClinVar (GRCh38, single-nucleotide variants with expert-reviewed labels)  
-- **Scale**: >250,000 variants  
-- **Labels**: Pathogenic (1) vs. Benign (0) 
-- **Variant categories**:  
-  - Coding: missense, synonymous, start-loss, stop-gain, stop-loss  
-  - Noncoding: canonical splice, non-splice intron, 5′ UTR, 3′ UTR, RNA gene
 
 ## Notebooks
 
