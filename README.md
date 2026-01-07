@@ -37,7 +37,7 @@ We provide one-click Jupyter notebook examples for each evaluated model, benchma
 </p>
 
 **Figure 1. Pathogenicity prediction performance of frontier sequence-based models across variant types.**  
-Evaluation and comparison of DNA and protein sequence AI models for their capacity to distinguish between pathogenic and benign variants across variant types, measured by the area under the receiver operating characteristic curve (AUROC).  
+Evaluation and comparison of DNA and protein sequence AI models for their capacity to distinguish between pathogenic and benign variants across variant types, measured by the area under the receiver operating characteristic curve (AUROC). Error bars denote 95% confidence intervals estimated by stratified bootstrap resampling (1,000 iterations) within each variant group.
 - **%P** indicates the proportion of pathogenic variants in each group.  
 - Some groups are defined by multiple annotated effects (e.g., both missense and 3′ UTR, with respect to different transcripts).  
 - **DNA models** are shown as solid bars, **protein models** as dashed bars.  
