@@ -1,0 +1,10 @@
+.DS_Store
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.venv*/
+
+# Full local datasets are ignored; the 1,000-row sample is versioned.
+data/*
+!data/sample_data.csv.gz
+results/
