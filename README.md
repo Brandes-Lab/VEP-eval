@@ -2,21 +2,21 @@
 
 [![bioRxiv](https://img.shields.io/badge/bioRxiv-Available-red)](https://www.biorxiv.org/content/10.1101/2025.09.05.674459v2)
 
-This repository contains the scoring and figure-generation notebooks for our paper, [Genomic heterogeneity inflates the performance of variant pathogenicity predictions](https://www.biorxiv.org/content/10.1101/2025.09.05.674459v2).
+We provide the scoring, benchmark-construction, and figure-generation notebooks for our paper, [Genomic heterogeneity inflates the performance of variant pathogenicity predictions](https://www.biorxiv.org/content/10.1101/2025.09.05.674459v2).
 
-All notebooks are stand-alone and use repository-relative paths. Model-scoring notebooks can be opened from the repository root or directly from their model subdirectory; figure notebooks should be run from the repository root. Comments and descriptions are in English.
+We designed the notebooks to use repository-relative paths and English comments throughout. Model-scoring notebooks can be opened from the repository root or directly from their model subdirectory; benchmark and figure notebooks should be run from the repository root.
 
-The repository includes [`data/sample_data.csv.gz`](data/sample_data.csv.gz), a representative 1,000-row sample containing the annotations needed by the model-scoring notebooks. It allows readers to test the scoring code without first downloading the complete benchmark.
+We include [`data/sample_data.csv.gz`](data/sample_data.csv.gz), a representative 1,000-row sample containing the annotations required by the model-scoring notebooks. This sample allows the scoring code to be tested without first downloading the complete benchmark.
 
-Figure notebooks use the complete scored benchmark at `data/processed/clinvar_benchmark_updated.csv`. This file is intentionally excluded from GitHub because of its size. The notebooks retain the outputs from the full-data analysis reported in the manuscript.
+Our ClinVar figure notebooks use the complete scored benchmark at `data/processed/clinvar_benchmark_updated.csv`. We do not store this file on GitHub because of its size. The executed figure notebooks retain the outputs from the complete-data analysis.
 
 ## Repository contents
 
 ### DNA-based model scoring
 
-The [`DNA-based Models/`](DNA-based%20Models/) directory contains notebooks for:
+In [`DNA-based Models/`](DNA-based%20Models/), we provide scoring notebooks for:
 
-- AlphaGenome, including the all-output analysis used for Supplementary Figure S5
+- AlphaGenome, including the all-output analysis used for Supplementary Figure S6
 - DNABERT-2, pinned to model revision `7bce263b15377fc15361f52cfab88f8b586abda0`
 - Evo 2
 - GPN-MSA
@@ -28,7 +28,7 @@ The [`DNA-based Models/`](DNA-based%20Models/) directory contains notebooks for:
 
 ### Protein-based model scoring
 
-The [`protein_models/`](protein_models/) directory contains notebooks for:
+In [`protein_models/`](protein_models/), we provide scoring notebooks for:
 
 - AlphaMissense
 - ESM1b, ESM1v, and ESM2
@@ -37,7 +37,7 @@ The [`protein_models/`](protein_models/) directory contains notebooks for:
 
 ### Benchmark construction
 
-[`VEP_ClinVar_Benchmarking_RefSeq.ipynb`](VEP_ClinVar_Benchmarking_RefSeq.ipynb) builds the annotation-only ClinVar benchmark.
+We use [`VEP_ClinVar_Benchmarking_RefSeq.ipynb`](VEP_ClinVar_Benchmarking_RefSeq.ipynb) to build the annotation-only ClinVar benchmark and the workflow summarized in Supplementary Figure S1.
 
 Its fixed public inputs are:
 
@@ -46,17 +46,20 @@ Its fixed public inputs are:
 - [UCSC hg38 reference genome](https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz)
 - [UCSC NCBI RefSeq transcript table](https://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/ncbiRefSeq.txt.gz)
 
+We use [`VEP_COSMIC_Benchmarking.ipynb`](VEP_COSMIC_Benchmarking.ipynb) to build the somatic-variant benchmark from COSMIC Cancer Mutation Census v103. The notebook gives the exact local filenames and download command for MANE Select. CMC v103 must be downloaded after login from the [official COSMIC Cancer Mutation Census page](https://cancer.sanger.ac.uk/cosmic/download/cancer-mutation-census); we do not redistribute the licensed COSMIC source file.
+
 ### Figure generation
 
 | Manuscript figure | Notebook |
 |---|---|
 | Figure 1: variant-type AUROC | [`VEP_AUROC_figure.ipynb`](VEP_AUROC_figure.ipynb) |
-| Figure 2: model robustness | [`VEP_model_robustness_figure.ipynb`](VEP_model_robustness_figure.ipynb) |
-| Figure 3: score distributions | [`VEP_score_distribution_figure.ipynb`](VEP_score_distribution_figure.ipynb) |
+| Figure 2: splice and 5′ UTR score distributions | [`VEP_score_distribution_figure.ipynb`](VEP_score_distribution_figure.ipynb) |
+| Figure 3: model robustness across variant types | [`VEP_model_robustness_figure.ipynb`](VEP_model_robustness_figure.ipynb) |
+| Supplementary Figure S1: ClinVar benchmark workflow | [`VEP_ClinVar_Benchmarking_RefSeq.ipynb`](VEP_ClinVar_Benchmarking_RefSeq.ipynb) |
 | Supplementary Figure S2: coordinate-balanced AUROC | [`VEP_coordinate_balance_figure.ipynb`](VEP_coordinate_balance_figure.ipynb) |
 | Supplementary Figure S3: ClinVar review-star analysis | [`VEP_ClinVar_star_figure.ipynb`](VEP_ClinVar_star_figure.ipynb) |
-| Supplementary Figure S4: AUPRC | [`VEP_AUPRC_figure.ipynb`](VEP_AUPRC_figure.ipynb) |
-| Supplementary Figure S5: AlphaGenome splice outputs | [`VEP_AlphaGenome_splice_figure.ipynb`](VEP_AlphaGenome_splice_figure.ipynb) |
+| Supplementary Figure S4: minority-class AUPRC | [`VEP_AUPRC_figure.ipynb`](VEP_AUPRC_figure.ipynb) |
+| Supplementary Figure S6: AlphaGenome splice outputs | [`VEP_AlphaGenome_splice_figure.ipynb`](VEP_AlphaGenome_splice_figure.ipynb) |
 
 ## Input and output
 
@@ -66,7 +69,7 @@ Model-scoring notebooks use the included sample by default:
 data/sample_data.csv.gz
 ```
 
-Figure notebooks use the complete scored benchmark:
+Our ClinVar figure notebooks use the complete scored benchmark:
 
 ```text
 data/processed/clinvar_benchmark_updated.csv
@@ -85,18 +88,18 @@ results/tables/
 results/figures/
 ```
 
-The full benchmark and generated model-score files are intentionally excluded from GitHub. The stable Supplementary Data download URL will be added here when it becomes available.
+We exclude the complete benchmarks and generated model-score files from GitHub because of file size and, for COSMIC, source-data licensing. We will add the stable Supplementary Data URL here when it becomes available.
 
 ## Running the notebooks
 
-For figure generation, install the common analysis packages:
+To run the figure notebooks, install the common analysis packages:
 
 ```bash
 python -m pip install jupyter pandas numpy scipy scikit-learn matplotlib seaborn
 jupyter lab
 ```
 
-Model-scoring dependencies differ by model and are stated inside each model notebook. Several scoring notebooks require a GPU, gated model access, an API key, or a manually licensed dataset.
+Model-scoring dependencies differ by model and are stated inside each notebook. Several models require a GPU, gated model access, an API key, or a separately licensed dataset.
 
 ## Results
 
