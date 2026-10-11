@@ -8,3 +8,6 @@ __pycache__/
 data/*
 !data/sample_data.csv.gz
 results/
+
+# COSMIC Cancer Mutation Census requires a licence; not redistributable.
+cosmic/
